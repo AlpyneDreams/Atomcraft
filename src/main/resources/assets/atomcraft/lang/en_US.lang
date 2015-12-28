@@ -1,0 +1,18 @@
+
+// Creative Tab
+itemGroup.atomcraft=Atomcraft
+
+// Blocks
+tile.concrete.name=Concrete
+
+// Ores
+tile.ore.uranium.name=Uranium Ore
+
+// Ingots
+item.ingot.uranium.name=Uranium Ingot
+
+// Dusts
+item.dust.uranium.name=Uranium Dust
+
+item.greenApple.name=Green Apple
+item.geigerCounter.name=Geiger Counter

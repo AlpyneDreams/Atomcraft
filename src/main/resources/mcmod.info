@@ -1,0 +1,16 @@
+[
+{
+  "modid": "atomcraft",
+  "name": "Atomcraft",
+  "description": "Working title.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

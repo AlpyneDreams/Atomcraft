@@ -4,9 +4,9 @@
 
 package net.dankparrot.atomcraft.items;
 
-import net.minecraft.item.Item;
 import net.dankparrot.atomcraft.creativetabs.ModCreativeTabs;
 import net.dankparrot.atomcraft.reference.Reference;
+import net.minecraft.item.Item;
 
 public class ItemAC extends Item {
 	
@@ -14,7 +14,6 @@ public class ItemAC extends Item {
 	{
 		super();
 		this.setUnlocalizedName(unlocalizedName);
-		this.setTextureName(Reference.MODID + ":" + unlocalizedName);
 		this.setMaxStackSize(maxStackSize);
 		this.setCreativeTab(ModCreativeTabs.AC_TAB);
 	}

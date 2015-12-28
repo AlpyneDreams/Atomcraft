@@ -6,15 +6,14 @@ package net.dankparrot.atomcraft.items;
 
 import net.dankparrot.atomcraft.reference.Names;
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlockWithMetadata;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockOre extends ItemBlockWithMetadata {
+public class ItemBlockOre /*extends ItemBlockWithMetadata*/ {
 	
 	public ItemBlockOre(Block block) {
-		super(block, block);
+		//super(block, block);
 	}
-	
+	/*
 	@Override
 	public String getUnlocalizedName(ItemStack stack)
 	{
@@ -23,5 +22,5 @@ public class ItemBlockOre extends ItemBlockWithMetadata {
 			meta = 0;
 		return this.getUnlocalizedName() + "." + Names.Ores.TYPES[meta];
 	}
-	
+	*/
 }

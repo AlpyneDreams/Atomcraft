@@ -14,8 +14,7 @@ public class BlockAC extends Block {
 	public BlockAC(String unlocalizedName, Material material)
 	{
 		super(material);
-		this.setBlockName(unlocalizedName);
-		this.setBlockTextureName(Reference.MODID + ":" + unlocalizedName);
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(ModCreativeTabs.AC_TAB);
 	}
 	

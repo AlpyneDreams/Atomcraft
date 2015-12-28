@@ -4,37 +4,25 @@
 
 package net.dankparrot.atomcraft.blocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
-
-import java.util.List;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.dankparrot.atomcraft.creativetabs.ModCreativeTabs;
 import net.dankparrot.atomcraft.reference.Names;
-import net.dankparrot.atomcraft.reference.Reference;
+import net.minecraft.block.material.Material;
 
 
 public class BlockOre extends BlockAC {
 	
-	public IIcon[] icons = new IIcon[Names.Ores.TYPES.length];
+	//public IIcon[] icons = new IIcon[Names.Ores.TYPES.length];
 	
 	public BlockOre()
 	{
 		super(Names.Blocks.ORE, Material.rock);
-		this.setHardness(3F);
-		this.setHarvestLevel("pickaxe", 2);
+		//this.setHardness(3F);
+		//this.setHarvestLevel("pickaxe", 2);
 		this.setStepSound(soundTypePiston);
+		//this.setLightLevel(7F); - do this for uranium
 		this.setCreativeTab(ModCreativeTabs.AC_TAB);
 	}
-	
+	/*
 	@Override
 	public void registerBlockIcons(IIconRegister reg)
 	{
@@ -77,6 +65,6 @@ public class BlockOre extends BlockAC {
 		{
 			list.add(new ItemStack(item, 1, i));
 		}
-	}
+	}*/
 	
 }

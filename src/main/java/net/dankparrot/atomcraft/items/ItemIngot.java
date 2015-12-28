@@ -4,26 +4,18 @@
 
 package net.dankparrot.atomcraft.items;
 
-import java.util.List;
-
 import net.dankparrot.atomcraft.reference.Names;
-import net.dankparrot.atomcraft.reference.Reference;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
 
 public class ItemIngot extends ItemAC {
 	
-	public IIcon[] icons = new IIcon[Names.Ores.TYPES.length];
+	//public IIcon[] icons = new IIcon[Names.Ores.TYPES.length];
 	
 	public ItemIngot()
 	{
 		super(Names.Items.INGOT, 64);
-		this.setHasSubtypes(true);
+		//this.setHasSubtypes(true);
 	}
-	
+	/*
 	@Override
 	public void registerIcons(IIconRegister reg)
 	{
@@ -59,6 +51,6 @@ public class ItemIngot extends ItemAC {
 		if (meta >= Names.Ores.TYPES.length)
 			meta = 0;
 		return this.getUnlocalizedName() + "." + Names.Ores.TYPES[meta];
-	}
+	}*/
 
 }

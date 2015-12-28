@@ -13,6 +13,8 @@ public class BlockConcrete extends BlockAC {
 		super(Names.Blocks.CONCRETE);
 		this.setHardness(3.0F);
 		this.setResistance(6000F);
+		this.setStepSound(soundTypeStone);
+		this.setHarvestLevel("pickaxe", 1); // stone pick
 	}
 	
 }

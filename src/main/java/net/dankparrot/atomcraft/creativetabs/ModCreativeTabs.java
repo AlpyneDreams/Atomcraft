@@ -5,7 +5,6 @@
 package net.dankparrot.atomcraft.creativetabs;
 
 import net.dankparrot.atomcraft.init.ModItems;
-import net.dankparrot.atomcraft.items.ItemGeigerCounter;
 import net.dankparrot.atomcraft.reference.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -16,7 +15,7 @@ public class ModCreativeTabs {
 		@Override
 		public Item getTabIconItem()
 		{
-			return ModItems.dust;
+			return ModItems.geigerCounter;
 		}
 	};
 }

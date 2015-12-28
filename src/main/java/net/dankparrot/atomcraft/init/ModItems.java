@@ -22,10 +22,14 @@ public class ModItems {
 	//public static final Item ingot = new ItemIngot();
 	//public static final Item dust = new ItemDust();
 	
+	private static void registerItem(Item item)
+	{
+		GameRegistry.registerItem(item, item.getUnlocalizedName().substring(5));
+	}
+	
 	public static void init()
 	{
-		// All item IDs are listed below. //
-		GameRegistry.registerItem(geigerCounter, "geiger_counter");
+		registerItem(geigerCounter);
 		
 		//GameRegistry.registerItem(ingot, "ingot");
 		//GameRegistry.registerItem(dust, "dust");

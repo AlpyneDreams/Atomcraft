@@ -2,14 +2,13 @@
 A Minecraft mod that adds uranium nukes, and many other things!
 
 ####Current Features:
-- Uranium Ore
+- Uranium Ore (with Ingots and Dust)
+- Ore Dictionary Support
 - Concrete
 - Geiger Counter
 
 ####Planned features:
-- Different Ores
-- Ingots and Dusts
-- Ore Dictionary Support
+- More Ores
 - Radiation
 - Nukes
 - Many more things to come!

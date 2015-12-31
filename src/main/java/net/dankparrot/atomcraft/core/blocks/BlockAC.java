@@ -37,19 +37,27 @@ public class BlockAC extends Block {
 	}
 	
 	/**
-	 * Every block has a mod-unique internal name
+	 * Returns the block's mod-unique internal name
 	 * that follows the format: "block_name".
-	 * This name is used for texture names,
-	 * model names, and item ids. The internal name
-	 * is automatically generated based on the 
-	 * block's unlocalized name.
+	 * The internal name is automatically generated
+	 * based on the unlocalized name.
+	 * 
 	 * @return The block's mod-unique internal name.
 	 */
 	public String getName()
 	{
 		return internalName;
 	}
-
+	
+	/**
+	 * Returns the block's mod-unique internal name
+	 * that follows the format: "block_name".
+	 * The internal name is automatically generated
+	 * based on the unlocalized name.
+	 * 
+	 * @param meta The damage value of the block.
+	 * @return The block's mod-unique internal name.
+	 */
 	public String getName(int meta)
 	{
 		return internalName;

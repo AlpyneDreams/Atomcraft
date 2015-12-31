@@ -35,6 +35,8 @@ public class ModItemModels {
 	public static void init()
 	{
 		registerItem(ModItems.geigerCounter);
+		registerItem(ModItems.ingot, 0);
+		registerItem(ModItems.dust, 0);
 	}
 	
 }

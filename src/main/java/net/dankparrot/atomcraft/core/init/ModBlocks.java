@@ -37,6 +37,6 @@ public class ModBlocks {
 		
 		registerBlock(ore, ItemBlockOre.class);
 
-		//OreDictionary.registerOre("oreUranium", new ItemStack(ore, 1, 0));
+		OreDictionary.registerOre("oreUranium", new ItemStack(ore, 1, 0));
 	}
 }

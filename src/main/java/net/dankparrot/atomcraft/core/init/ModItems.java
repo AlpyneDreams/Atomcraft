@@ -20,22 +20,26 @@ public class ModItems {
 	public static final ItemAC geigerCounter = new ItemGeigerCounter();
 	
 	// Multi-ID items
-	//public static final Item ingot = new ItemIngot();
-	//public static final Item dust = new ItemDust();
+	public static final ItemAC ingot = new ItemIngot();
+	public static final ItemAC dust = new ItemDust();
 	
 	private static void registerItem(ItemAC item)
 	{
-		GameRegistry.registerItem(item, item.getName());
+		registerItem(item, 0);
+	}
+	
+	private static void registerItem(ItemAC item, int meta)
+	{
+		GameRegistry.registerItem(item, item.getName(meta));
 	}
 	
 	public static void init()
 	{
 		registerItem(geigerCounter);
+		registerItem(ingot, 0);
+		registerItem(dust, 0);
 		
-		//GameRegistry.registerItem(ingot, "ingot");
-		//GameRegistry.registerItem(dust, "dust");
-		
-		//OreDictionary.registerOre("ingotUranium", new ItemStack(ingot, 1, 0));
-		//OreDictionary.registerOre("dustUranium", new ItemStack(dust, 1, 0));
+		OreDictionary.registerOre("ingotUranium", new ItemStack(ingot, 1, 0));
+		OreDictionary.registerOre("dustUranium", new ItemStack(dust, 1, 0));
 	}
 }

@@ -28,6 +28,6 @@ public class ItemBlockOre extends ItemBlock {
 	@Override	// Unlocalized name format: tile.block.subBlock
 	public String getUnlocalizedName(ItemStack stack)
 	{
-		return super.getUnlocalizedName(stack) + "." + EnumOreType.getType(stack.getItemDamage());
+		return super.getUnlocalizedName(stack) + "." + EnumOreType.getType(stack.getItemDamage()).getName();
 	}
 }

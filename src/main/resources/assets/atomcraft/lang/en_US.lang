@@ -9,9 +9,9 @@ tile.concrete.name=Concrete
 tile.ore.uranium.name=Uranium Ore
 
 // Ingots
-//item.ingot.uranium.name=Uranium Ingot
+item.ingot.uranium.name=Uranium Ingot
 
 // Dusts
-//item.dust.uranium.name=Uranium Dust
+item.dust.uranium.name=Uranium Dust
 
 item.geigerCounter.name=Geiger Counter

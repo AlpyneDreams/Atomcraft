@@ -4,53 +4,38 @@
 
 package net.dankparrot.atomcraft.core.items;
 
+import java.util.List;
+
+import net.dankparrot.atomcraft.core.reference.EnumOreType;
 import net.dankparrot.atomcraft.core.reference.Names;
+import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 public class ItemDust extends ItemAC {
-	
-	//public IIcon[] icons = new IIcon[Names.Ores.TYPES.length];
 	
 	public ItemDust()
 	{
 		super(Names.Items.DUST, 64);
-		//this.setHasSubtypes(true);
-	}
-	/*
-	@Override
-	public void registerIcons(IIconRegister reg)
-	{
-		for (int i = 0; i < this.icons.length; i++)
-		{
-			// Format: "atomcraft:uraniumDust"
-			this.icons[i] = reg.registerIcon(Reference.MODID + ":" + Names.Ores.TYPES[i] + "Dust");
-		}
+		this.setHasSubtypes(true);
 	}
 	
 	@Override
-	public IIcon getIconFromDamage(int meta)
+	public String getName(int meta)
 	{
-		if (meta >= Names.Ores.TYPES.length)
-			meta = 0;
-		
-		return this.icons[meta];
+		return EnumOreType.getType(meta).getName() + "_" + this.getName();
 	}
 	
 	@Override
-	public void getSubItems(Item item, CreativeTabs tab, List list)
-	{
-		for (int i = 0; i < Names.Ores.TYPES.length; i++)
-		{
-			list.add(new ItemStack(item, 1, i));
-		}
+	public String getUnlocalizedName(ItemStack stack) {
+		return super.getUnlocalizedName() + "." + EnumOreType.getType(stack.getItemDamage()).getName();
 	}
-	
+
 	@Override
-	public String getUnlocalizedName(ItemStack stack)
-	{
-		int meta = stack.getItemDamage();
-		if (meta >= Names.Ores.TYPES.length)
-			meta = 0;
-		return this.getUnlocalizedName() + "." + Names.Ores.TYPES[meta];
-	}*/
+	public void getSubItems(Item itemIn, CreativeTabs tab, List subItems) {
+	    subItems.add(new ItemStack(itemIn, 1, 0));
+	}
+
 
 }

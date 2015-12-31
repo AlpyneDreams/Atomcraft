@@ -1,7 +1,7 @@
 {
 	"parent": "builtin/generated",
 	"textures": {
-		"layer0": "atomcraft:items/uraniumDust"
+		"layer0": "atomcraft:items/uranium_ingot"
 	},
 	"display": {
 		"thirdperson": {

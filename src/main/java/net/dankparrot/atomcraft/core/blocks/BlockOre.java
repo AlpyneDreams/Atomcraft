@@ -50,7 +50,7 @@ public class BlockOre extends BlockAC {
 	@Override
 	public String getName(int meta)
 	{
-		return EnumOreType.getType(meta).getName() + "_" + super.getName();
+		return EnumOreType.getType(meta).getName() + "_" + this.getName();
 	}
 
 	@Override	// Converts a meta integer to a block state.

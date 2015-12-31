@@ -26,23 +26,31 @@ public class ItemAC extends Item {
 	
 	public ItemAC(String unlocalizedName)
 	{
-		this(unlocalizedName, 1);
+		this(unlocalizedName, 64);
 	}
 	
 	/**
-	 * Every item has a mod-unique internal name
+	 * Returns the item's mod-unique internal name
 	 * that follows the format: "item_name".
-	 * This name is used for texture names,
-	 * model names, and item ids. The internal name
-	 * is automatically generated based on the 
-	 * block's unlocalized name.
-	 * @return The block's mod-unique internal name.
+	 * The internal name is automatically generated
+	 * based on the unlocalized name.
+	 * 
+	 * @return The item's mod-unique internal name.
 	 */
 	public String getName()
 	{
 		return internalName;
 	}
 	
+	/**
+	 * Returns the item's mod-unique internal name
+	 * that follows the format: "item_name".
+	 * The internal name is automatically generated
+	 * based on the unlocalized name.
+	 * 
+	 * @param meta The damage value of the item.
+	 * @return The item's mod-unique internal name.
+	 */
 	public String getName(int meta)
 	{
 		return internalName;

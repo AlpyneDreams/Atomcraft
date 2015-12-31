@@ -6,7 +6,7 @@ itemGroup.atomcraft=Atomcraft
 tile.concrete.name=Concrete
 
 // Ores
-//tile.ore.uranium.name=Uranium Ore
+tile.ore.uranium.name=Uranium Ore
 
 // Ingots
 //item.ingot.uranium.name=Uranium Ingot

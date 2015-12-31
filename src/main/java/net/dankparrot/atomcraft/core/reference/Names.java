@@ -21,24 +21,6 @@ public class Names {
 		public static final String ORE = "ore";
 	}
 	
-	public static final class Register {
-		public static final class Items {
-			// All item asset names are listed below. //
-			public static final String GEIGER_COUNTER = "geiger_counter";
-			public static final String GREEN_APPLE = "green_apple";
-			
-			public static final String DUST = "dust";
-			public static final String INGOT = "ingot";
-		}
-		
-		public static final class Blocks {
-			// All block asset names are listed below. //
-			public static final String CONCRETE = "concrete";
-			
-			public static final String ORE = "ore";
-		}
-	}
-	
 	//public static final class Ores {
 		//public static final String URANIUM = "uranium";
 		

@@ -12,6 +12,7 @@ import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.FMLLog;
 
 public class ModItemModels {
 	
@@ -24,6 +25,11 @@ public class ModItemModels {
 	{
 		ItemModelMesher itemMesher = Minecraft.getMinecraft().getRenderItem().getItemModelMesher();
 		itemMesher.register(item, meta, new ModelResourceLocation(Reference.MODID + ":" + item.getName(meta), "inventory"));
+	}
+	
+	public static void preInit()
+	{
+		//ModelBakery.addVarientName
 	}
 	
 	public static void init()

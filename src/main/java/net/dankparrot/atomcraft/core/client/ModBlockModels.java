@@ -4,9 +4,11 @@
 
 package net.dankparrot.atomcraft.core.client;
 
+import net.dankparrot.atomcraft.core.Atomcraft;
 import net.dankparrot.atomcraft.core.blocks.BlockAC;
 import net.dankparrot.atomcraft.core.init.ModBlocks;
 import net.dankparrot.atomcraft.core.init.ModItems;
+import net.dankparrot.atomcraft.core.reference.EnumOreType;
 import net.dankparrot.atomcraft.core.reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -14,6 +16,7 @@ import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.FMLLog;
 
 public class ModBlockModels {
 
@@ -30,13 +33,15 @@ public class ModBlockModels {
 	
 	public static void preInit()
 	{
-		//ModelBakery.addVariantName(Item.getItemFromBlock(ModBlocks.ore), names);
+		// TODO add ModelBakery init stuff
+		//ModelBakery.addVariantName(Item.getItemFromBlock(ModBlocks.ore), "atomcraft:uranium_ore");
 	}
 	
 	public static void init()
 	{
+		Atomcraft.ACLog.info("Initializing block models.");
 		registerBlock(ModBlocks.concrete);
-		registerBlock(ModBlocks.ore);
+		registerBlock(ModBlocks.ore, 0);
 	}
 	
 }

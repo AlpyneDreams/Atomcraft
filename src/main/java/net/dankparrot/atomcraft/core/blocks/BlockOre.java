@@ -6,6 +6,7 @@ package net.dankparrot.atomcraft.core.blocks;
 
 import java.util.List;
 
+import net.dankparrot.atomcraft.core.Atomcraft;
 import net.dankparrot.atomcraft.core.creativetabs.ModCreativeTabs;
 import net.dankparrot.atomcraft.core.reference.EnumOreType;
 import net.dankparrot.atomcraft.core.reference.Names;
@@ -49,7 +50,7 @@ public class BlockOre extends BlockAC {
 	@Override
 	public String getName(int meta)
 	{
-		return this.getName(0) + "_" + EnumOreType.getType(meta).getName();
+		return EnumOreType.getType(meta).getName() + "_" + super.getName();
 	}
 
 	@Override	// Converts a meta integer to a block state.
@@ -66,7 +67,7 @@ public class BlockOre extends BlockAC {
 	@Override	// Registers the varients in the creative menu.
 	public void getSubBlocks(Item item, CreativeTabs tab, List list) {
 		list.add(new ItemStack(item, 1, 0));
-		list.add(new ItemStack(item, 1, 1));
+		//list.add(new ItemStack(item, 1, 1));
 	}
 	
 	@Override

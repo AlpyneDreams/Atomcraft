@@ -5,6 +5,7 @@
 package net.dankparrot.atomcraft.core.items;
 
 import net.dankparrot.atomcraft.core.blocks.BlockAC;
+import net.dankparrot.atomcraft.core.reference.EnumOreType;
 import net.dankparrot.atomcraft.core.reference.Names;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
@@ -12,7 +13,7 @@ import net.minecraft.item.ItemStack;
 
 public class ItemBlockOre extends ItemBlock {
 	
-	public ItemBlockOre(BlockAC block) {
+	public ItemBlockOre(Block block) {
 		super(block);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
@@ -21,6 +22,6 @@ public class ItemBlockOre extends ItemBlock {
 	@Override	// Unlocalized name format: tile.block.subBlock
 	public String getUnlocalizedName(ItemStack stack)
 	{
-		return super.getUnlocalizedName(stack) + "." + ((BlockAC)this.block).getName(stack.getItemDamage());
+		return super.getUnlocalizedName(stack) + "." + EnumOreType.getType(stack.getItemDamage());
 	}
 }

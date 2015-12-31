@@ -9,9 +9,6 @@ import net.minecraft.util.IStringSerializable;
 public enum EnumOreType implements IStringSerializable {
 	URANIUM(0, "uranium", 7F);
 	
-	// Lookup table for metadata.
-    private static final EnumOreType[] META_LOOKUP = new EnumOreType[values().length];
-	
 	private int meta;
 	private String name;
 	private float lightLevel;
@@ -41,18 +38,17 @@ public enum EnumOreType implements IStringSerializable {
 	}
 	
 	/**
+	 * Note: This function is a <u>placeholder</u>, it is
+	 * not yet implemented.
+	 * <p>
 	 * Returns an EnumOreType based on the ore's metadata.
 	 * @param meta The block ore item's metadata.
 	 * @return The ore type.
 	 */
 	public static EnumOreType getType(int meta)
     {
-        if (meta < 0 || meta >= META_LOOKUP.length)
-        {
-            meta = 0;
-        }
-
-        return META_LOOKUP[meta];
+		// TODO implement this function
+		return URANIUM;
     }
 	
 	/**

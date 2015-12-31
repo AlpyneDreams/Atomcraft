@@ -70,9 +70,10 @@ public class BlockOre extends BlockAC {
 		//list.add(new ItemStack(item, 1, 1));
 	}
 	
-	@Override
+	@Override	// Uranium ore should emitt a faint light
 	public int getLightValue(IBlockAccess world, BlockPos pos)
 	{
+		// TODO maybe implement this more like redstone ore, i.e. update ticks and particles?
 		return (int)(15.0F * EnumOreType.getType(this.getMetaFromState(world.getBlockState(pos))).getBlockLightLevel());
 	}
 }

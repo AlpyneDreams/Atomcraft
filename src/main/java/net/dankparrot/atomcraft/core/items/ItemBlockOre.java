@@ -19,6 +19,12 @@ public class ItemBlockOre extends ItemBlock {
 		this.setHasSubtypes(true);
 	}
 	
+    @Override
+	public int getMetadata(int damage)
+    {
+        return damage;
+    }
+	
 	@Override	// Unlocalized name format: tile.block.subBlock
 	public String getUnlocalizedName(ItemStack stack)
 	{

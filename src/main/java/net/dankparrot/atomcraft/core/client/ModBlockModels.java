@@ -33,13 +33,12 @@ public class ModBlockModels {
 	
 	public static void preInit()
 	{
-		// TODO add ModelBakery init stuff
-		//ModelBakery.addVariantName(Item.getItemFromBlock(ModBlocks.ore), "atomcraft:uranium_ore");
+		// TODO automate ModelBakery init stuff
+		ModelBakery.addVariantName(Item.getItemFromBlock(ModBlocks.ore), "atomcraft:uranium_ore");
 	}
 	
 	public static void init()
 	{
-		Atomcraft.ACLog.info("Initializing block models.");
 		registerBlock(ModBlocks.concrete);
 		registerBlock(ModBlocks.ore, 0);
 	}

@@ -26,7 +26,7 @@ public class Atomcraft
 	@SidedProxy(clientSide="net.dankparrot.atomcraft.core.ClientProxy", serverSide="net.dankparrot.atomcraft.core.ServerProxy")
 	public static CommonProxy proxy;
 	
-	public static Logger ACLog = LogManager.getLogger(Reference.NAME);
+	public static Logger Log = LogManager.getLogger(Reference.NAME);
 	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)

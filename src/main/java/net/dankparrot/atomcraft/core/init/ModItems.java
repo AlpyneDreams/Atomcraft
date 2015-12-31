@@ -2,12 +2,13 @@
 		© 2015 Dank Parrot
 ****************************************/
 
-package net.dankparrot.atomcraft.init;
+package net.dankparrot.atomcraft.core.init;
 
-import net.dankparrot.atomcraft.items.ItemDust;
-import net.dankparrot.atomcraft.items.ItemGeigerCounter;
-import net.dankparrot.atomcraft.items.ItemIngot;
-import net.dankparrot.atomcraft.reference.Names;
+import net.dankparrot.atomcraft.core.items.ItemAC;
+import net.dankparrot.atomcraft.core.items.ItemDust;
+import net.dankparrot.atomcraft.core.items.ItemGeigerCounter;
+import net.dankparrot.atomcraft.core.items.ItemIngot;
+import net.dankparrot.atomcraft.core.reference.Names;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -16,15 +17,15 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class ModItems {
 
-	public static final Item geigerCounter = new ItemGeigerCounter();
+	public static final ItemAC geigerCounter = new ItemGeigerCounter();
 	
 	// Multi-ID items
 	//public static final Item ingot = new ItemIngot();
 	//public static final Item dust = new ItemDust();
 	
-	private static void registerItem(Item item)
+	private static void registerItem(ItemAC item)
 	{
-		GameRegistry.registerItem(item, item.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(item, item.getName());
 	}
 	
 	public static void init()

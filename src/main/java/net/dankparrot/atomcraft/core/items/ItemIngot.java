@@ -2,9 +2,10 @@
 		© 2015 Dank Parrot
 ****************************************/
 
-package net.dankparrot.atomcraft.items;
+package net.dankparrot.atomcraft.core.items;
 
-import net.dankparrot.atomcraft.reference.Names;
+import net.dankparrot.atomcraft.core.reference.Names;
+import net.minecraft.block.properties.PropertyEnum;
 
 public class ItemIngot extends ItemAC {
 	

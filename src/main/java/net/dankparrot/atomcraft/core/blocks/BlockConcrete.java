@@ -2,9 +2,9 @@
 		© 2015 Dank Parrot
 ****************************************/
 
-package net.dankparrot.atomcraft.blocks;
+package net.dankparrot.atomcraft.core.blocks;
 
-import net.dankparrot.atomcraft.reference.Names;
+import net.dankparrot.atomcraft.core.reference.Names;
 
 public class BlockConcrete extends BlockAC {
 	

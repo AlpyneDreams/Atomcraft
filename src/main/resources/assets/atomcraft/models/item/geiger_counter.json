@@ -1,7 +1,7 @@
 {
 	"parent": "builtin/generated",
 	"textures": {
-		"layer0": "atomcraft:items/geigerCounter"
+		"layer0": "atomcraft:items/geiger_counter"
 	},
 	"display": {
 		"thirdperson": {

@@ -2,9 +2,9 @@
 		© 2015 Dank Parrot
 ****************************************/
 
-package net.dankparrot.atomcraft.items;
+package net.dankparrot.atomcraft.core.items;
 
-import net.dankparrot.atomcraft.reference.Names;
+import net.dankparrot.atomcraft.core.reference.Names;
 
 public class ItemDust extends ItemAC {
 	

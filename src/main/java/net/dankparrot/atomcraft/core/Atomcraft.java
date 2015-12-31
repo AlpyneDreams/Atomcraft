@@ -3,15 +3,15 @@
 	© 2015 Dank Parrot aka Gamer12594
 ****************************************/
 
-package net.dankparrot.atomcraft;
+package net.dankparrot.atomcraft.core;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import net.dankparrot.atomcraft.init.ModBlocks;
-import net.dankparrot.atomcraft.init.ModItems;
-import net.dankparrot.atomcraft.init.Recipes;
-import net.dankparrot.atomcraft.reference.Reference;
+import net.dankparrot.atomcraft.core.init.ModBlocks;
+import net.dankparrot.atomcraft.core.init.ModItems;
+import net.dankparrot.atomcraft.core.init.Recipes;
+import net.dankparrot.atomcraft.core.reference.Reference;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -25,7 +25,7 @@ public class Atomcraft
 	@Mod.Instance(value = Reference.MODID)
 	public static Atomcraft instance;
 	
-	@SidedProxy(clientSide="net.dankparrot.atomcraft.ClientProxy", serverSide="net.dankparrot.atomcraft.ServerProxy")
+	@SidedProxy(clientSide="net.dankparrot.atomcraft.core.ClientProxy", serverSide="net.dankparrot.atomcraft.core.ServerProxy")
 	public static CommonProxy proxy;
 	
 	@Mod.EventHandler

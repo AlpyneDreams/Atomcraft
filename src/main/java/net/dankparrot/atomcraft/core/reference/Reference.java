@@ -2,7 +2,7 @@
 		© 2015 Jeffrey Ellison
 ****************************************/
 
-package net.dankparrot.atomcraft.reference;
+package net.dankparrot.atomcraft.core.reference;
 
 public class Reference {
 	public static final String MODID = "atomcraft";

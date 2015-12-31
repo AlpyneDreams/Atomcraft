@@ -2,27 +2,30 @@
 		© 2015 Dank Parrot
 ****************************************/
 
-package net.dankparrot.atomcraft;
+package net.dankparrot.atomcraft.core;
 
-import net.dankparrot.atomcraft.client.ModItemMeshers;
+import net.dankparrot.atomcraft.core.init.ModBlocks;
+import net.dankparrot.atomcraft.core.init.ModItems;
+import net.dankparrot.atomcraft.core.init.Recipes;
+import net.dankparrot.atomcraft.core.reference.Reference;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-public class ClientProxy extends CommonProxy {
+public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent e)
 	{
-		super.preInit(e);
+		ModItems.init();
+		ModBlocks.init();
 	}
 
 	public void init(FMLInitializationEvent e)
 	{
-		super.init(e);
-		ModItemMeshers.init();
+		Recipes.init();
 	}
 
 	public void postInit(FMLPostInitializationEvent e)
 	{
-		super.postInit(e);
+
 	}
 }

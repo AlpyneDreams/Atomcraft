@@ -2,7 +2,7 @@
 		© 2015 Dank Parrot
 ****************************************/
 
-package net.dankparrot.atomcraft.reference;
+package net.dankparrot.atomcraft.core.reference;
 
 public class Names {
 	public static final class Items {

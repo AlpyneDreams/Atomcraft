@@ -2,10 +2,10 @@
 		© 2015 Dank Parrot
 ****************************************/
 
-package net.dankparrot.atomcraft.creativetabs;
+package net.dankparrot.atomcraft.core.creativetabs;
 
-import net.dankparrot.atomcraft.init.ModItems;
-import net.dankparrot.atomcraft.reference.Reference;
+import net.dankparrot.atomcraft.core.init.ModItems;
+import net.dankparrot.atomcraft.core.reference.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 

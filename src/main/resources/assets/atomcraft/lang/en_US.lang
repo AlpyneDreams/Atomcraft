@@ -2,16 +2,29 @@
 // Creative Tab
 itemGroup.atomcraft=Atomcraft
 
-// Blocks
-tile.concrete.name=Concrete
+/// BLOCKS ///
+
+tile.landMine.name=Land Mine
 
 // Ores
 tile.ore.uranium.name=Uranium Ore
 
+// Ore Blocks
+tile.uraniumBlock=Uranium Block
+
+/// ITEMS ///
+
+item.geigerCounter.name=Geiger Counter
+item.launchRemote.name=Launch Remote
+
 // Ingots
 item.ingot.uranium.name=Uranium Ingot
 
+// Nuggets
+item.nugget.uranium.name=Uranium Nugget
+item.nugget.plutonium.name=Plutonium Nugget
+
 // Dusts
 item.dust.uranium.name=Uranium Dust
+item.dust.plutonium.name=Plutonium Dust
 
-item.geigerCounter.name=Geiger Counter

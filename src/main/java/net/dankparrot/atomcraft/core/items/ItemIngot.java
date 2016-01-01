@@ -24,12 +24,12 @@ public class ItemIngot extends ItemAC {
 	@Override
 	public String getName(int meta)
 	{
-		return EnumOreType.getType(meta).getName() + "_" + this.getName();
+		return EnumOreType.fromMeta(meta).getName() + "_" + this.getName();
 	}
 	
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
-		return super.getUnlocalizedName() + "." + EnumOreType.getType(stack.getItemDamage()).getName();
+		return super.getUnlocalizedName() + "." + EnumOreType.fromMeta(stack.getItemDamage()).getName();
 	}
 
 	@Override

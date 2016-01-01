@@ -13,11 +13,11 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class ItemDust extends ItemAC {
+public class ItemNugget extends ItemAC {
 	
-	public ItemDust()
+	public ItemNugget()
 	{
-		super(Names.Items.DUST, 64);
+		super(Names.Items.NUGGET, 64);
 		this.setHasSubtypes(true);
 	}
 	

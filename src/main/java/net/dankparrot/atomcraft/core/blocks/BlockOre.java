@@ -37,7 +37,6 @@ public class BlockOre extends BlockAC {
 		this.setStepSound(soundTypePiston);
 		// The default state is TYPE=URANIUM.
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumOreType.URANIUM));
-		//this.setLightLevel(7F); - do this for uranium
 		
 	}
 	
@@ -50,12 +49,12 @@ public class BlockOre extends BlockAC {
 	@Override
 	public String getName(int meta)
 	{
-		return EnumOreType.getType(meta).getName() + "_" + this.getName();
+		return EnumOreType.fromMeta(meta).getName() + "_" + this.getName();
 	}
 
 	@Override	// Converts a meta integer to a block state.
 	public IBlockState getStateFromMeta(int meta) {
-		return getDefaultState().withProperty(TYPE, EnumOreType.getType(meta));
+		return getDefaultState().withProperty(TYPE, EnumOreType.fromMeta(meta));
 	}
 
 	@Override	// Converts a block state int a meta integer.
@@ -73,7 +72,7 @@ public class BlockOre extends BlockAC {
 	@Override	// Uranium ore should emitt a faint light
 	public int getLightValue(IBlockAccess world, BlockPos pos)
 	{
-		// TODO maybe implement this more like redstone ore, i.e. update ticks and particles?
-		return (int)(15.0F * EnumOreType.getType(this.getMetaFromState(world.getBlockState(pos))).getBlockLightLevel());
+		// TODO maybe implement this more like redstone ore, i.e. ticks and particles?
+		return (int)(15.0F * EnumOreType.fromMeta(this.getMetaFromState(world.getBlockState(pos))).getBlockLightLevel());
 	}
 }

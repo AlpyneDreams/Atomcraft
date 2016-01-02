@@ -27,7 +27,7 @@ public enum EnumUraniumType implements IStringSerializable {
 	WEAPONS_GRADE(4, 85f, "weaponsGrade"),
 	DEPLETED(15, 0.3f, "depleted");
 	
-	// TODO maybe some sort of standard for uranium types?
+	// TODO need an easy way to convert % enriched -> uranium type
 	
 	private int meta;
 	private float percent;

@@ -51,7 +51,7 @@ public class ItemUranium extends ItemAC {
 		tagCompound.setFloat("EnrichmentPercent", EnumUraniumType.NATURAL.getEnrichmentPercent());
 	}
 	
-	// TODO When EnrichmentPercent changes, the ItemStack's metadata should change
+	// TODO when EnrichmentPercent changes, the ItemStack's metadata should change
 	
 	@Override
 	public String getUnlocalizedName(ItemStack stack)
@@ -64,10 +64,9 @@ public class ItemUranium extends ItemAC {
 	{
 		if (stack.hasTagCompound())
 		{
-			// messy stuff here
 			float percent = stack.getTagCompound().getFloat("EnrichmentPercent");
 			String percentStr = String.format("%.1f%% ", percent);
-			String tooltipStr = StatCollector.translateToLocal("tooltip." + Names.Items.URANIUM + ".enrichment");
+			String tooltipStr = this.getTooltip("enrichment");
 			
 			tooltip.add(EnumChatFormatting.GRAY + percentStr + tooltipStr);
 		}

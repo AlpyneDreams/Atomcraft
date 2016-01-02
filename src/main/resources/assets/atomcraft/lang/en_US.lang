@@ -28,3 +28,14 @@ item.nugget.plutonium.name=Plutonium Nugget
 item.dust.uranium.name=Uranium Dust
 item.dust.plutonium.name=Plutonium Dust
 
+// Uranium Types
+item.uranium.natural.name=Natural Uranium
+item.uranium.slightlyEnriched.name=Slightly-Enriched Uranium
+item.uranium.lowEnriched.name=Low-Enriched Uranium
+item.uranium.highlyEnriched.name=Highly-Enriched Uranium
+
+item.uranium.depleted.name=Depleted Uranium
+
+/// TOOLTIPS ///
+
+tooltip.uranium.enrichment=%s%% Enriched

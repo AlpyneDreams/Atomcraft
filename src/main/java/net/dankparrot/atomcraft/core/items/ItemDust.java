@@ -6,6 +6,8 @@ package net.dankparrot.atomcraft.core.items;
 
 import java.util.List;
 
+import com.google.common.base.CaseFormat;
+
 import net.dankparrot.atomcraft.core.reference.EnumOreType;
 import net.dankparrot.atomcraft.core.reference.Names;
 import net.minecraft.block.properties.PropertyEnum;

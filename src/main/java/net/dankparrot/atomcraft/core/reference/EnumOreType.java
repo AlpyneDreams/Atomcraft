@@ -45,12 +45,16 @@ public enum EnumOreType implements IStringSerializable {
 	/**
 	 * Returns an EnumOreType based on the ore's metadata.
 	 * @param meta The block ore item's metadata.
-	 * @return The ore type.
+	 * @return The ore type. Returns null if nothing found.
 	 */
 	public static EnumOreType fromMeta(int meta)
     {
-		// not the best way to do it but whatever
-		return EnumOreType.values()[meta - 1];
+		for (EnumOreType u : EnumOreType.values())
+		{
+			if(u.meta == meta)
+				return u;
+		}
+		return null;
     }
 	
 	/**

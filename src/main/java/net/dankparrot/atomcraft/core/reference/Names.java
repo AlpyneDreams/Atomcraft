@@ -10,6 +10,8 @@ public class Names {
 		public static final String GEIGER_COUNTER = "geigerCounter";
 		public static final String LAUNCH_REMOTE = "launchRemote";
 		
+		public static final String URANIUM = "uranium";
+		
 		public static final String DUST = "dust";
 		public static final String NUGGET = "nugget";
 		public static final String INGOT = "ingot";

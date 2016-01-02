@@ -18,7 +18,7 @@ import net.minecraft.util.IStringSerializable;
  *  <br>
  *  15 - Depleted (0.3%)
  */
-
+// Really messy enrichment code, WIP
 public enum EnumUraniumType implements IStringSerializable {
 	NATURAL(0, 0.7f, "natural"),
 	SLIGHTLY_ENRICHED(1, 0.9f, "slightlyEnriched"),

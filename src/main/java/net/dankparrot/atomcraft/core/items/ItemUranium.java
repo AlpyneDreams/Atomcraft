@@ -22,6 +22,7 @@ import net.minecraftforge.fml.common.registry.LanguageRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+// Really messy enrichment code (WIP)
 public class ItemUranium extends ItemAC {
 	
 	private static final float NATURAL_URANIUM = 0.7f;
@@ -63,12 +64,12 @@ public class ItemUranium extends ItemAC {
 	{
 		if (stack.hasTagCompound())
 		{
-			// messy stuff here:
+			// messy stuff here
 			float percent = stack.getTagCompound().getFloat("EnrichmentPercent");
-			String percentStr = String.format("%.1f", percent);
-			String format = StatCollector.translateToLocal("tooltip." + Names.Items.URANIUM + ".enrichment");
+			String percentStr = String.format("%.1f%% ", percent);
+			String tooltipStr = StatCollector.translateToLocal("tooltip." + Names.Items.URANIUM + ".enrichment");
 			
-			tooltip.add(EnumChatFormatting.GRAY + String.format(format, percentStr));
+			tooltip.add(EnumChatFormatting.GRAY + percentStr + tooltipStr);
 		}
 	}
 }

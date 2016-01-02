@@ -66,7 +66,6 @@ public class BlockOre extends BlockAC {
 	@Override	// Registers the varients in the creative menu.
 	public void getSubBlocks(Item item, CreativeTabs tab, List list) {
 		list.add(new ItemStack(item, 1, 0));
-		//list.add(new ItemStack(item, 1, 1));
 	}
 	
 	@Override	// Uranium ore should emitt a faint light

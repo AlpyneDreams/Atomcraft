@@ -8,6 +8,7 @@ import net.dankparrot.atomcraft.core.Atomcraft;
 import net.dankparrot.atomcraft.core.blocks.BlockAC;
 import net.dankparrot.atomcraft.core.init.ModBlocks;
 import net.dankparrot.atomcraft.core.init.ModItems;
+import net.dankparrot.atomcraft.core.items.ItemAC;
 import net.dankparrot.atomcraft.core.reference.EnumOreType;
 import net.dankparrot.atomcraft.core.reference.Reference;
 import net.minecraft.block.Block;
@@ -19,7 +20,17 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.FMLLog;
 
 public class ModBlockModels {
-
+	
+	private static void addVariants(BlockAC block, int... meta)
+	{
+		String[] names = new String[meta.length];
+		
+		for (int i = 0; i < names.length; i++)
+			names[i] = Reference.MODID + ":" + block.getName(meta[i]);
+		
+		ModelBakery.addVariantName(Item.getItemFromBlock(block), names);
+	}
+	
 	private static void registerBlock(BlockAC block)
 	{
 		registerBlock(block, 0);
@@ -33,8 +44,7 @@ public class ModBlockModels {
 	
 	public static void preInit()
 	{
-		// TODO automate ModelBakery init stuff
-		ModelBakery.addVariantName(Item.getItemFromBlock(ModBlocks.ore), "atomcraft:uranium_ore");
+		addVariants(ModBlocks.ore, 0);
 	}
 	
 	public static void init()

@@ -25,9 +25,7 @@ public enum EnumUraniumType implements IStringSerializable {
 	LOW_ENRICHED(2, 2f, "lowEnriched"),
 	HIGHLY_ENRICHED(3, 20f, "highlyEnriched"),
 	WEAPONS_GRADE(4, 85f, "weaponsGrade"),
-	DEPLETED(15, 0.3f, "depleted");
-	
-	// TODO need an easy way to convert % enriched -> uranium type
+	DEPLETED(15, 0f, "depleted");
 	
 	private int meta;
 	private float percent;
@@ -73,6 +71,31 @@ public enum EnumUraniumType implements IStringSerializable {
 		}
 		return null;
     }
+	
+	/**
+	 * Returns an EnumUraniumType based on enrichment percent.
+	 * @param percent The enrichment percent of the uranium.
+	 * @return The uranium type. Returns null if invalid type.
+	 */
+	public static EnumUraniumType fromPercentEnriched(float percent)
+	{
+		// TODO need a better way to convert % enriched -> uranium type
+		if (percent == 0f)
+			return DEPLETED;
+		if (percent == 0.7f)
+			return NATURAL;
+		
+		if (percent >= 85f)
+			return WEAPONS_GRADE;
+		if (percent < 85f && percent >= 20f)
+			return HIGHLY_ENRICHED;
+		if (percent < 20f && percent >= 2f)
+			return LOW_ENRICHED;
+		if (percent < 2f && percent >= 0.9f)
+			return SLIGHTLY_ENRICHED;
+		
+		return null;
+	}
 	
 	/**
 	 * @return The minimum (or only) enrichment percent for the type of uranium.

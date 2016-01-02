@@ -25,11 +25,13 @@ public class ItemIngot extends ItemAC {
 	public String getName(int meta)
 	{
 		return EnumOreType.fromMeta(meta).getName() + "_" + this.getName();
+		// Format: uranium_ingot
 	}
 	
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
 		return super.getUnlocalizedName() + "." + EnumOreType.fromMeta(stack.getItemDamage()).getName();
+		// Format: item.ingot.uranium
 	}
 
 	@Override

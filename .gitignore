@@ -18,7 +18,13 @@ build
 .gradle
 gradle*
 
-# other
+# eclipse
 eclipse
 run
+
+# other
+info
+tools
+
+# javadocs (add later)
 doc

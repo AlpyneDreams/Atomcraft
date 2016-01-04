@@ -51,8 +51,6 @@ public class ModBlockModels {
 	{
 		registerBlock(ModBlocks.concrete);
 		registerBlock(ModBlocks.ore, 0);
-		
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(ModBlocks.centrifuge), 0, new ModelResourceLocation(Reference.MODID + ":" + ModBlocks.centrifuge.getName(0), "inventory"));
 	}
 	
 }

@@ -30,7 +30,6 @@ public class ItemAC extends Item {
 		
 		this.internalName = CaseFormat.LOWER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, unlocalizedName);
 		this.tooltipName = "tooltip." + unlocalizedName;
-		
 		this.setCreativeTab(ModCreativeTabs.AC_TAB);
 	}
 	

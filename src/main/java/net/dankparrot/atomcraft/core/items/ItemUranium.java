@@ -75,7 +75,7 @@ public class ItemUranium extends ItemAC {
 		{
 			float percent = stack.getTagCompound().getFloat("EnrichmentPercent");
 			String percentStr = String.format("%.1f%% ", percent);
-			String tooltipStr = this.getTooltip("enriched");
+			String tooltipStr = this.getTooltip("enrichment");
 			
 			tooltip.add(EnumChatFormatting.GRAY + percentStr + tooltipStr);
 		}

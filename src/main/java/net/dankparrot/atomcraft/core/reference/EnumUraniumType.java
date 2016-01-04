@@ -11,10 +11,10 @@ import net.minecraft.util.IStringSerializable;
 /**
  * Enumeration for Different Types of Uranium:<br>
  * 	0 - Natural (0.7%)<br>
- * 	1 - Slightly Enriched (&gt; 0.9%)<br>
- *  2 - Low-Enriched (&gt; 2%)<br>
- *  3 - Highly-Enriched (&gt; 20%) (a.k.a. Weapons-Usable)<br>
- *  4 - Weapons-Grade (&gt; 85%)<br>
+ * 	1 - Slightly Enriched (> 0.9%)<br>
+ *  2 - Low-Enriched (> 2%)<br>
+ *  3 - Highly-Enriched (> 20%) (a.k.a. Weapons-Usable)<br>
+ *  4 - Weapons-Grade (> 85%)<br>
  *  <br>
  *  15 - Depleted (0.3%)
  */

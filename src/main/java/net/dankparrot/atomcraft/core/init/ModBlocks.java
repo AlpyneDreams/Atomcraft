@@ -5,7 +5,6 @@
 package net.dankparrot.atomcraft.core.init;
 
 import net.dankparrot.atomcraft.core.blocks.BlockAC;
-import net.dankparrot.atomcraft.core.blocks.BlockCentrifuge;
 import net.dankparrot.atomcraft.core.blocks.BlockConcrete;
 import net.dankparrot.atomcraft.core.blocks.BlockOre;
 import net.dankparrot.atomcraft.core.items.ItemBlockOre;
@@ -17,7 +16,6 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class ModBlocks {
 	
-	public static final BlockCentrifuge centrifuge = new BlockCentrifuge();
 	public static final BlockAC concrete = new BlockConcrete();
 	
 	// Multi-ID blocks
@@ -35,7 +33,6 @@ public class ModBlocks {
 	
 	public static void init()
 	{
-		GameRegistry.registerBlock(centrifuge, centrifuge.getName());
 		registerBlock(concrete);
 		
 		registerBlock(ore, ItemBlockOre.class);

@@ -4,6 +4,7 @@ itemGroup.atomcraft=Atomcraft
 
 /// BLOCKS ///
 
+tile.centrifuge.name=Centrifuge
 tile.concrete.name=Concrete
 tile.landMine.name=Land Mine
 

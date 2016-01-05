@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 
 import com.google.common.base.CaseFormat;
 
-public class BlockAC extends Block {
+public class BlockAC extends Block implements IBlockAC {
 	
 	private String internalName;
 	
@@ -35,28 +35,11 @@ public class BlockAC extends Block {
 		this(unlocalizedName, Material.rock);
 	}
 	
-	/**
-	 * Returns the block's mod-unique internal name
-	 * that follows the format: "block_name".
-	 * The internal name is automatically generated
-	 * based on the unlocalized name.
-	 * 
-	 * @return The block's mod-unique internal name.
-	 */
 	public String getName()
 	{
 		return internalName;
 	}
 	
-	/**
-	 * Returns the block's mod-unique internal name
-	 * that follows the format: "block_name".
-	 * The internal name is automatically generated
-	 * based on the unlocalized name.
-	 * 
-	 * @param meta The damage value of the block.
-	 * @return The block's mod-unique internal name.
-	 */
 	public String getName(int meta)
 	{
 		return internalName;
@@ -64,7 +47,7 @@ public class BlockAC extends Block {
 	
 	@Override	// Sets the block's metadata to drop
 	public int damageDropped(IBlockState state) {
-		return getMetaFromState(state);
+		return this.getMetaFromState(state);
 	}
 	
 	@Override	// Sets the item returned from creative mode pick-block.

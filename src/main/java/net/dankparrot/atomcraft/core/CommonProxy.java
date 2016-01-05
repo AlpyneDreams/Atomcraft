@@ -20,12 +20,12 @@ public class CommonProxy {
 	{
 		ModItems.init();
 		ModBlocks.init();
+		ModTileEntities.init();
 	}
 
 	public void init(FMLInitializationEvent e)
 	{
 		Recipes.init();
-		ModTileEntities.init();
 		NetworkRegistry.INSTANCE.registerGuiHandler(Atomcraft.instance, new ModGuiHandler());
 	}
 

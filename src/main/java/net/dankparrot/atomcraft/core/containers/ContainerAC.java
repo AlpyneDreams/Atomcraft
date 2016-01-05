@@ -9,6 +9,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 
 public class ContainerAC extends Container {
 	
@@ -25,12 +26,15 @@ public class ContainerAC extends Container {
 	 * @param playerInv
 	 * @param te
 	 */
-	public ContainerAC(IInventory playerInv, TileEntityContainer te)
+	public ContainerAC(IInventory playerInv, TileEntityContainer te, int numSlots)
 	{
 		super();
 		this.tileEnt = te;
+		this.numContainerSlots = numSlots;
 		this.addEntirePlayerInventory(playerInv);
 	}
+	
+	// TODO better slot registration system
 	
 	/// METHODS ///
 	
@@ -41,29 +45,29 @@ public class ContainerAC extends Container {
 	public void addEntirePlayerInventory(IInventory playerInv)
 	{
 		// Hotbar (0-8)
-		this.addSlotGrid(playerInv, 8, 142, 9, 1, 0);
+		this.addSlotGrid(playerInv, this.numContainerSlots, 8, 142, 9, 1);
 		
 		// Inventory (9-35)
-		this.addSlotGrid(playerInv, 8, 84, 9, 3, 9);
+		this.addSlotGrid(playerInv, this.numContainerSlots + 9, 8, 84, 9, 3);
 	}
 	
 	/**
 	 * Adds a grid of slots of a specified width and height
 	 * at a given position to the container.
 	 * @param inv the	IInventory to get the slot from
+	 * @param index		the top-left slot id to start from
 	 * @param xPos		leftmost x position of the grid
 	 * @param yPos		topmost y position of the grid
 	 * @param width		width of the grid in number of slots
 	 * @param height	height of the grid in number of slots
-	 * @param firstID 	the top-left slot id, start from 36
 	 */
-	public void addSlotGrid(IInventory inv, int xPos, int yPos, int width, int height, int firstID)
+	public void addSlotGrid(IInventory inv, int index, int xPos, int yPos, int width, int height)
 	{
 		for (int y = 0; y < height; y++)	// for each row
 		{
 			for (int x = 0; x < width; x++)	// and each column
 			{
-				this.addSlotToContainer(new Slot(inv, x + (y * width) + firstID, xPos + (x * 18), yPos + (y * 18)));
+				this.addSlotToContainer(new Slot(inv, x + (y * width) + index, xPos + (x * 18), yPos + (y * 18)));
 			}
 		}
 	}
@@ -101,4 +105,5 @@ public class ContainerAC extends Container {
 	//@Override
 	//public boolean mergeItemStack(ItemStack stack, int startIndex, int endIndex, boolean useEndIndex)
 	// Re-write this function to support ItemSlots with varying size if needed.
+	
 }

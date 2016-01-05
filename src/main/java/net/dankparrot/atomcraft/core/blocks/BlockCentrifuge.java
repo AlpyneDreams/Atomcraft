@@ -25,11 +25,11 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
-public class BlockCentrifuge extends BlockContainer {
+public class BlockCentrifuge extends BlockContainer implements IBlockAC {
 
 	private String internalName;
 	
-	// TODO Replace temporary implementation of BlockContainer with
+	// TODO replace temporary BlockContainer code
 	
 	public BlockCentrifuge()
 	{
@@ -38,6 +38,8 @@ public class BlockCentrifuge extends BlockContainer {
 		this.setUnlocalizedName(Names.Blocks.CENTRIFUGE);
 		this.setCreativeTab(ModCreativeTabs.AC_TAB);
 	}
+	
+	/// METHODS ///
 	
 	@Override
 	public void breakBlock(World world, BlockPos pos, IBlockState blockstate) {
@@ -60,52 +62,28 @@ public class BlockCentrifuge extends BlockContainer {
 
 	@Override
 	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumFacing side, float hitX, float hitY, float hitZ) {
-		if (!world.isRemote) {
-			player.openGui(Atomcraft.instance, ModGuiHandler.CENTRIFUGE, world, pos.getX(), pos.getY(), pos.getZ());
-		}
-		return true;
+		//if (!world.isRemote) {
+		//	player.openGui(Atomcraft.instance, ModGuiHandler.CENTRIFUGE, world, pos.getX(), pos.getY(), pos.getZ());
+		//}
+		//return true;
+		return false;	// TODO placeholder because crashing
 	}
 
+	/// MUTATORS ///
+	
 	@Override
 	public int getRenderType() {
-		return 3;
+		return 3; // dunno what the point of this is
 	}
 	
-	/**
-	 * Returns the block's mod-unique internal name
-	 * that follows the format: "block_name".
-	 * The internal name is automatically generated
-	 * based on the unlocalized name.
-	 * 
-	 * @return The block's mod-unique internal name.
-	 */
 	public String getName()
 	{
 		return internalName;
 	}
 	
-	/**
-	 * Returns the block's mod-unique internal name
-	 * that follows the format: "block_name".
-	 * The internal name is automatically generated
-	 * based on the unlocalized name.
-	 * 
-	 * @param meta The damage value of the block.
-	 * @return The block's mod-unique internal name.
-	 */
 	public String getName(int meta)
 	{
 		return internalName;
-	}
-	
-	@Override	// Sets the block's metadata to drop
-	public int damageDropped(IBlockState state) {
-		return getMetaFromState(state);
-	}
-	
-	@Override	// Sets the item returned from creative mode pick-block.
-	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos) {
-		return new ItemStack(Item.getItemFromBlock(this), 1, this.getMetaFromState(world.getBlockState(pos)));
 	}
 
 }

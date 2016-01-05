@@ -4,6 +4,7 @@
 
 package net.dankparrot.atomcraft.core.client.gui;
 
+import net.dankparrot.atomcraft.core.Atomcraft;
 import net.dankparrot.atomcraft.core.containers.ContainerAC;
 import net.dankparrot.atomcraft.core.containers.ContainerCentrifuge;
 import net.dankparrot.atomcraft.core.reference.Reference;
@@ -15,12 +16,16 @@ import net.minecraft.util.ResourceLocation;
 
 public class GuiCentrifuge extends GuiContainer {
 	
+	// TODO get this to stop crashing
+	
 	private IInventory playerInv;
 	private TileEntityCentrifuge tileEnt;
 	
 	public GuiCentrifuge(IInventory playerInv, TileEntityCentrifuge te)
 	{
 		super(new ContainerCentrifuge(playerInv, te));
+		
+		Atomcraft.Log.info("Now the GUI is here!");
 		
 		this.playerInv = playerInv;
 		this.tileEnt = te;
@@ -31,6 +36,7 @@ public class GuiCentrifuge extends GuiContainer {
 
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
+		Atomcraft.Log.info("gui bg");
 		GlStateManager.color(1.0f, 1.0f, 1.0f);
 		this.mc.getTextureManager().bindTexture(new ResourceLocation(Reference.MODID + ":textures/gui/container/centrifuge.png"));
 		this.drawTexturedModalRect(this.guiLeft, this.guiTop, 0, 0, this.xSize, this.ySize);
@@ -38,6 +44,7 @@ public class GuiCentrifuge extends GuiContainer {
 	
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
+		Atomcraft.Log.info("gui fg");
 	    String s = this.tileEnt.getDisplayName().getUnformattedText();
 	    this.fontRendererObj.drawString(s, 88 - this.fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
 	    this.fontRendererObj.drawString(this.playerInv.getDisplayName().getUnformattedText(), 8, 72, 4210752);

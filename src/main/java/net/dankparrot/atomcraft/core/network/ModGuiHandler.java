@@ -4,6 +4,7 @@
 
 package net.dankparrot.atomcraft.core.network;
 
+import net.dankparrot.atomcraft.core.Atomcraft;
 import net.dankparrot.atomcraft.core.client.gui.GuiCentrifuge;
 import net.dankparrot.atomcraft.core.containers.ContainerCentrifuge;
 import net.dankparrot.atomcraft.core.tileentity.TileEntityCentrifuge;
@@ -20,6 +21,7 @@ public class ModGuiHandler implements IGuiHandler {
 	
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+		Atomcraft.Log.info("We've made it as far as the GUI handler. (SERVER)");
 		if (ID == this.CENTRIFUGE)
 			return new ContainerCentrifuge(player.inventory, (TileEntityCentrifuge) world.getTileEntity(new BlockPos(x, y, x)));
 		
@@ -28,6 +30,7 @@ public class ModGuiHandler implements IGuiHandler {
 
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+		Atomcraft.Log.info("We've made it as far as the GUI handler. (CLIENT)");
 		if (ID == this.CENTRIFUGE)
 			return new GuiCentrifuge(player.inventory, (TileEntityCentrifuge)world.getTileEntity(new BlockPos(x, y, z)));
 		

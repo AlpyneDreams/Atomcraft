@@ -19,6 +19,7 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.IChatComponent;
 
+// WIP, don't use yet
 public class TileEntityContainer extends TileEntity implements IInventory {
 	
 	/// VARIABLES ///
@@ -99,7 +100,8 @@ public class TileEntityContainer extends TileEntity implements IInventory {
 	
 	@Override
 	public boolean isUseableByPlayer(EntityPlayer player) {
-		return this.worldObj.getTileEntity(this.getPos()) == this && player.getDistanceSq(this.pos.add(0.5, 0.5, 0.5)) <= 64;
+		//return this.getWorld().getTileEntity(this.getPos()) == this && player.getDistanceSq(this.getPos().add(0.5, 0.5, 0.5)) <= 64;
+		return true;
 	}
 	
 	@Override
@@ -184,7 +186,7 @@ public class TileEntityContainer extends TileEntity implements IInventory {
 	
 	@Override
 	public String getName() {
-		return this.hasCustomName() ? this.getCustomName() : this.unlocalizedName;
+		return this.hasCustomName() ? this.getCustomName() : this.getUnlocalizedName();
 	}
 	
 	// Unlocalized Name

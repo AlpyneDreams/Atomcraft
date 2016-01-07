@@ -23,6 +23,7 @@ public class ClientProxy extends CommonProxy {
 		super.init(e);
 		ModItemModels.init();
 		ModBlockModels.init();
+		
 	}
 
 	public void postInit(FMLPostInitializationEvent e)

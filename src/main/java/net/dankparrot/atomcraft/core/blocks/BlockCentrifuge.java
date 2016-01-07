@@ -40,13 +40,6 @@ public class BlockCentrifuge extends BlockContainer implements IBlockAC {
 	}
 	
 	/// METHODS ///
-	
-	@Override
-	public void breakBlock(World world, BlockPos pos, IBlockState blockstate) {
-		TileEntityCentrifuge te = (TileEntityCentrifuge) world.getTileEntity(pos);
-		InventoryHelper.dropInventoryItems(world, pos, te);
-		super.breakBlock(world, pos, blockstate);
-	}
 
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
@@ -55,27 +48,22 @@ public class BlockCentrifuge extends BlockContainer implements IBlockAC {
 
 	@Override
 	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-		if (stack.hasDisplayName()) {
-			((TileEntityCentrifuge) worldIn.getTileEntity(pos)).setCustomName(stack.getDisplayName());
-		}
+		
 	}
 
 	@Override
 	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumFacing side, float hitX, float hitY, float hitZ) {
-		//if (!world.isRemote) {
-		//	player.openGui(Atomcraft.instance, ModGuiHandler.CENTRIFUGE, world, pos.getX(), pos.getY(), pos.getZ());
-		//}
-		//return true;
-		return false;	// TODO placeholder because crashing
+		return false;
 	}
 
 	/// MUTATORS ///
 	
 	@Override
 	public int getRenderType() {
-		return 3; // dunno what the point of this is
+		return 3;
 	}
 	
+	// No bloody default methods for interfaces in < JRE 1.8
 	public String getName()
 	{
 		return internalName;

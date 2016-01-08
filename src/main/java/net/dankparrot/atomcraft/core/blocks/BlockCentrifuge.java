@@ -33,7 +33,7 @@ public class BlockCentrifuge extends BlockContainer implements IBlockAC {
 	
 	public BlockCentrifuge()
 	{
-		super(Material.rock);
+		super(Material.iron);
 		this.internalName = CaseFormat.LOWER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, Names.Blocks.CENTRIFUGE);
 		this.setUnlocalizedName(Names.Blocks.CENTRIFUGE);
 		this.setCreativeTab(ModCreativeTabs.AC_TAB);
@@ -47,13 +47,10 @@ public class BlockCentrifuge extends BlockContainer implements IBlockAC {
 	}
 
 	@Override
-	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-		
-	}
-
-	@Override
-	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumFacing side, float hitX, float hitY, float hitZ) {
-		return false;
+	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
+		TileEntityCentrifuge t = (TileEntityCentrifuge) worldIn.getTileEntity(pos);
+		InventoryHelper.dropInventoryItems(worldIn, pos, t);
+		super.breakBlock(worldIn, pos, state);
 	}
 
 	/// MUTATORS ///

@@ -6,7 +6,8 @@ itemGroup.atomcraft=Atomcraft
 
 tile.centrifuge.name=Centrifuge
 tile.concrete.name=Concrete
-tile.landMine.name=Land Mine
+tile.siren.name=Siren
+//tile.landMine.name=Land Mine
 
 // Ores
 tile.ore.uranium.name=Uranium Ore
@@ -17,7 +18,7 @@ tile.uraniumBlock=Uranium Block
 /// ITEMS ///
 
 item.geigerCounter.name=Geiger Counter
-item.launchRemote.name=Launch Remote
+//item.launchRemote.name=Launch Remote
 
 // Ingots
 item.ingot.uranium.name=Uranium Chunk
@@ -44,3 +45,9 @@ item.uranium.depleted.name=Depleted Uranium
 /// TOOLTIPS ///
 
 tooltip.uranium.enriched=Enriched
+
+/// DEATHS ///
+
+death.attack.nuke=%1$s was obliterated by a nuclear weapon.
+death.attack.nuke.entity=%1$s was obliterated by %2s's nuclear weapon.
+

@@ -8,6 +8,7 @@ import net.dankparrot.atomcraft.core.blocks.BlockAC;
 import net.dankparrot.atomcraft.core.blocks.BlockCentrifuge;
 import net.dankparrot.atomcraft.core.blocks.BlockConcrete;
 import net.dankparrot.atomcraft.core.blocks.BlockOre;
+import net.dankparrot.atomcraft.core.blocks.BlockSiren;
 import net.dankparrot.atomcraft.core.blocks.IBlockAC;
 import net.dankparrot.atomcraft.core.items.ItemBlockOre;
 import net.minecraft.block.Block;
@@ -23,6 +24,7 @@ public class ModBlocks {
 	
 	public static final Block centrifuge = new BlockCentrifuge();
 	public static final BlockAC concrete = new BlockConcrete();
+	public static final BlockAC siren = new BlockSiren();
 	
 	// Multi-ID blocks
 	public static final BlockAC ore = new BlockOre();
@@ -42,6 +44,7 @@ public class ModBlocks {
 	{
 		registerBlock(concrete);
 		registerBlock(centrifuge);
+		registerBlock(siren);
 		
 		registerBlock(ore, ItemBlockOre.class);
 

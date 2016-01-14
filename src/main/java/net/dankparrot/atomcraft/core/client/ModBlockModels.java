@@ -53,7 +53,9 @@ public class ModBlockModels {
 	{
 		registerBlock(ModBlocks.concrete);
 		registerBlock(ModBlocks.centrifuge);
-		registerBlock(ModBlocks.siren);
+		
+		registerBlock(ModBlocks.siren, 0);
+		registerBlock(ModBlocks.siren, 1);
 		
 		registerBlock(ModBlocks.ore, 0);
 	}

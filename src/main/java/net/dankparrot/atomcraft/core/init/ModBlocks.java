@@ -44,7 +44,7 @@ public class ModBlocks {
 	{
 		registerBlock(concrete);
 		registerBlock(centrifuge);
-		registerBlock(siren);
+		registerBlock(siren);	// TODO does BlockSiren need ItemBlockSiren
 		
 		registerBlock(ore, ItemBlockOre.class);
 

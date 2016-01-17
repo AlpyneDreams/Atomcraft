@@ -19,7 +19,6 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.IChatComponent;
 
-// WIP, don't use yet
 public class TileEntityContainer extends TileEntity implements IInventory {
 	
 	/// VARIABLES ///
@@ -106,7 +105,6 @@ public class TileEntityContainer extends TileEntity implements IInventory {
 	
 	@Override
 	public boolean isItemValidForSlot(int index, ItemStack stack) {
-		// TODO specific item only slots
 		return true;
 	}
 	
@@ -171,13 +169,15 @@ public class TileEntityContainer extends TileEntity implements IInventory {
 	
 	@Override
 	public int getInventoryStackLimit() {
-		return 64;
+		return 64; // If this is changed, then I think you must modify Container.mergeItemStack
 	}
 	
 	@Override
 	public int getSizeInventory() {
 		return this.inventory.length;
 	}
+	
+	// Display Name
 	
 	@Override
 	public IChatComponent getDisplayName() {

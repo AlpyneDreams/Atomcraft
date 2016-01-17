@@ -10,11 +10,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModTileEntities {
 	
-	private static void registerTileEntity(TileEntity ent)
-	{
-		// TODO registering automation for tileEnts
-	}
-	
 	public static void init()
 	{
 		GameRegistry.registerTileEntity(TileEntityCentrifuge.class, "centrifuge");

@@ -11,22 +11,15 @@ import net.minecraft.inventory.IInventory;import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 
-// WIP, don't use
 public class ContainerAC extends Container {
 	
 	/// VARIABLES ///
 	
 	private int numContainerSlots;
-	
 	private TileEntityContainer tileEnt;
 	
-	/// CONSTRUCTORS ///
+	/// CONSTRUCTOR ///
 	
-	/**
-	 * <b>Note:</b> Use <i>BEFORE</i> adding any other slots to the container.
-	 * @param playerInv
-	 * @param te
-	 */
 	public ContainerAC(IInventory playerInv, TileEntityContainer te, int numSlots)
 	{
 		super();
@@ -34,8 +27,6 @@ public class ContainerAC extends Container {
 		this.numContainerSlots = numSlots;
 		this.addEntirePlayerInventory(playerInv);
 	}
-	
-	// TODO better slot registration system
 	
 	/// METHODS ///
 	
@@ -55,7 +46,8 @@ public class ContainerAC extends Container {
 	/**
 	 * Adds a grid of slots of a specified width and height
 	 * at a given position to the container.
-	 * @param inv the	IInventory to get the slot from
+	 * 
+	 * @param inv 		the inventory to get the slot from
 	 * @param index		the top-left slot id to start from
 	 * @param xPos		leftmost x position of the grid
 	 * @param yPos		topmost y position of the grid
@@ -103,8 +95,13 @@ public class ContainerAC extends Container {
 		return this.tileEnt.isUseableByPlayer(playerIn);
 	}
 	
+	public TileEntityContainer getTileEntity()
+	{
+		return this.tileEnt;
+	}
+	
 	//@Override
 	//public boolean mergeItemStack(ItemStack stack, int startIndex, int endIndex, boolean useEndIndex)
-	// Re-write this function to support ItemSlots with varying size if needed.
+	// Re-write this function to support item slots with varying size if needed.
 	
 }

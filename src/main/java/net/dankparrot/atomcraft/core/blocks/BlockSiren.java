@@ -76,7 +76,7 @@ public class BlockSiren extends BlockAC {
 				if (i.getMeta() == meta)
 					return i;
 			}
-			return null; // TODO can we return this.fromMeta(0) [also applies to EnumOreType]?
+			return null; // TODO can we return this.fromMeta(0)? [also applies to EnumOreType]
 		}
 		
 		public int getMeta()

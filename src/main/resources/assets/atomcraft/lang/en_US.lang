@@ -7,7 +7,6 @@ itemGroup.atomcraft=Atomcraft
 tile.centrifuge.name=Centrifuge
 tile.concrete.name=Concrete
 tile.siren.name=Siren
-//tile.landMine.name=Land Mine
 
 // Ores
 tile.ore.uranium.name=Uranium Ore

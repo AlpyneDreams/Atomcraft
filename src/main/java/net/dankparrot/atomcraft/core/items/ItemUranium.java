@@ -81,6 +81,12 @@ public class ItemUranium extends ItemAC {
 		}
 	}
 	
+    @SideOnly(Side.CLIENT)
+    public boolean hasEffect(ItemStack stack)
+    {
+        return stack.getItemDamage() == EnumUraniumType.WEAPONS_GRADE.getMeta();
+    }
+	
 	@Override
 	public void getSubItems(Item itemIn, CreativeTabs tab, List subItems) {
 	    subItems.add(new ItemStack(itemIn, 1, 0));

@@ -13,13 +13,17 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
+import net.minecraft.world.World;
 
 public class BlockSiren extends BlockAC {
 	
-	public static final PropertyEnum STATE = PropertyEnum.create("state", EnumSiren.class);
+	//public static final PropertyEnum STATE = PropertyEnum.create("state", EnumSiren.class);
 	
 	public BlockSiren()
 	{
@@ -29,10 +33,19 @@ public class BlockSiren extends BlockAC {
 		this.setStepSound(soundTypeStone);
 		this.setHarvestLevel("pickaxe", 0);
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.5F, 1.0F);
+		this.translucent = true;
 		// The default state is state=off
-		this.setDefaultState(this.blockState.getBaseState().withProperty(STATE, EnumSiren.OFF));
+		//this.setDefaultState(this.blockState.getBaseState().withProperty(STATE, EnumSiren.OFF));
 	}
 	
+	@Override
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
+	{
+		worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), "tile.piston.out", 3.0f, 1.0f, true);
+		return true;
+	}
+	
+	/*
 	@Override
 	protected BlockState createBlockState()
 	{
@@ -94,5 +107,5 @@ public class BlockSiren extends BlockAC {
 			return getName();
 		}
 		
-	}
+	}*/
 }

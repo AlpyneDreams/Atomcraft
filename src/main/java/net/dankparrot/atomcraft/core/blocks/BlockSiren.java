@@ -33,7 +33,7 @@ public class BlockSiren extends BlockAC {
 		this.setStepSound(soundTypeStone);
 		this.setHarvestLevel("pickaxe", 0);
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.5F, 1.0F);
-		this.translucent = true;
+		//this.translucent = true;
 		// The default state is state=off
 		//this.setDefaultState(this.blockState.getBaseState().withProperty(STATE, EnumSiren.OFF));
 	}

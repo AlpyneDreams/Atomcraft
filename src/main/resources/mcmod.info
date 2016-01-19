@@ -2,7 +2,7 @@
 {
   "modid": "atomcraft",
   "name": "Atomcraft",
-  "description": "Adds uranium nukes, and many other things!",
+  "description": "Adds uranium, nukes, and many other things!",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",

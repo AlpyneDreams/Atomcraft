@@ -1,0 +1,5 @@
+{
+	"variants": {
+		"type=instant": { "model":"atomcraft:instant_tnt" }
+	}
+}

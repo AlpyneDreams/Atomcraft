@@ -1,0 +1,5 @@
+{
+	"variants": {
+		"type=uranium": { "model":"atomcraft:uranium_ore" }
+	}
+}

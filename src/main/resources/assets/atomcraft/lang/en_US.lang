@@ -1,0 +1,54 @@
+
+// Creative Tab
+itemGroup.atomcraft=Atomcraft
+
+/// BLOCKS ///
+
+tile.centrifuge.name=Centrifuge
+tile.concrete.name=Concrete
+tile.siren.name=Siren
+
+// Ores
+tile.ore.uranium.name=Uranium Ore
+
+// Explosives
+tile.explosives.instant.name=Instant TNT
+
+// Ore Blocks
+//tile.uraniumBlock=Uranium Block
+
+/// ITEMS ///
+
+item.geiger_counter.name=Geiger Counter
+//item.launchRemote.name=Launch Remote
+
+// Ingots
+item.ingot.uranium.name=Uranium Chunk
+
+// Nuggets
+item.nugget.uranium.name=Uranium Nugget
+item.nugget.plutonium.name=Plutonium Nugget
+
+// Dusts
+item.dust.uranium.name=Uranium Dust
+item.dust.plutonium.name=Plutonium Dust
+
+// Uranium Types
+item.uranium.name=Uranium Sample
+item.uranium.natural.name=Natural Uranium
+item.uranium.slightly_enriched.name=Slightly-Enriched Uranium
+item.uranium.low_enriched.name=Low-Enriched Uranium
+item.uranium.highly_enriched.name=Highly-Enriched Uranium
+item.uranium.weapons_grade.name=Weapons-Grade Uranium
+
+item.uranium.depleted.name=Depleted Uranium
+
+/// TOOLTIPS ///
+
+tooltip.uranium.enriched=Enriched
+
+/// DEATHS ///
+
+death.attack.nuke=%1$s was obliterated by a nuclear weapon.
+death.attack.nuke.entity=%1$s was obliterated by %2s's nuclear weapon.
+
